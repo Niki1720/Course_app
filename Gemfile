@@ -14,6 +14,7 @@ gem 'haml-rails', "~> 2.0"
 gem 'html2haml'
 gem 'simple_form'
 gem 'faker'
+gem 'devise'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
