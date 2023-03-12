@@ -1,0 +1,4 @@
+- flash.each do |name, msg|
+  %div{class: "alert alert-#{name == "notice" ? "success" : "danger"} alert-dismissable fade show d-flex justify-content-between", role: :"alert"}
+    = content_tag :div, msg, id: :"flash_#{name}"
+    %button.btn-close{"aria-label": :"Close", "data-bs-dismiss": :"alert", type: :"button"}
