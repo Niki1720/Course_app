@@ -1,2 +1,10 @@
 @import 'bootstrap';
 @import './actiontext.scss';
+
+.navbar-brand{
+  margin-left: 20px;
+}
+
+.nav-item.dropdown {
+  margin-right: 80px;
+}
