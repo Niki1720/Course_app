@@ -91,6 +91,8 @@ GEM
     faker (3.1.1)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
+    friendly_id (5.4.2)
+      activerecord (>= 4.0.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     haml (6.1.1)
@@ -261,6 +263,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   faker
+  friendly_id (~> 5.4.0)
   haml-rails (~> 2.0)
   html2haml
   jbuilder (~> 2.7)
