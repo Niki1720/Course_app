@@ -1,0 +1,12 @@
+class AddFieldsToCourses < ActiveRecord::Migration[6.1]
+  def up
+    add_column :courses, :short_description, :text
+    add_column :courses, :language, :string, default: "English", null: false
+    add_column :courses, :level, :string, default: "Beginner", null: false
+    add_column :courses, :price, :integer, default: "0", null: false
+  end
+  
+  def down
+    remove_columns :courses, :short_description, :language, :level, :price
+  end
+end

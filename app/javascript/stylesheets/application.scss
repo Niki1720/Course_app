@@ -1,6 +1,7 @@
 @import 'bootstrap';
 @import './actiontext.scss';
 
+
 .navbar-brand{
   margin-left: 20px;
 }
@@ -8,3 +9,11 @@
 .nav-item.dropdown {
   margin-right: 80px;
 }
+
+.form-select.is-valid{
+  background-image: none !important;
+  }
+
+.form-control.is-valid{
+  background-image: none;
+  }
