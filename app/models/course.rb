@@ -31,4 +31,7 @@ class Course < ApplicationRecord
    def self.ransackable_associations(auth_object = nil)
     ["user"]
   end
+  
+  include PublicActivity::Model
+  tracked owner: Proc.new{ |controller, model| controller.current_user }
 end
