@@ -13,18 +13,16 @@
         .fa.fa-globe-africa
         = course.language
       .col-md-6
-        .text-right
-          .fa.fa-signal
-          = course.level
+        .fa.fa-signal
+        = course.level
   .card-footer
     .row
       .col-md-6
         .far.fa-clock
         = course.created_at.strftime('%d-%b-%Y')
       .col-md-6
-        .text-right
-          .fa.fa-chalkboard-teacher
-          = course.user.username
+        .fa.fa-chalkboard-teacher
+        = course.user.username
   .card-footer
     = link_to 'Show', course, class: 'btn btn-sm btn-primary'
     = link_to 'Edit', edit_course_path(course), class: 'btn btn-sm btn-warning'
