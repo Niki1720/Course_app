@@ -13,7 +13,10 @@ class User < ApplicationRecord
   
     validate :must_have_a_role, on: :update
   
- def self.ransackable_attributes(auth_object = nil)
+  extend FriendlyId
+  friendly_id :email, use: :slugged
+ 
+  def self.ransackable_attributes(auth_object = nil)
     ["email", "sign_in_count", "courses"]
   end
   
