@@ -11,7 +11,7 @@ class User < ApplicationRecord
   
   has_many :courses  
   
-    validate :must_have_a_role, on: :update
+  validate :must_have_a_role, on: :update
   
   extend FriendlyId
   friendly_id :email, use: :slugged
@@ -33,6 +33,10 @@ class User < ApplicationRecord
       self.add_role(:student) if self.roles.blank?
       self.add_role(:teacher) 
     end
+  end
+  
+  def online?
+    updated_at > 2.minutes.ago
   end
   
   private
