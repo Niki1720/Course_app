@@ -27,4 +27,8 @@
       .badge.bg-success Yes
     - else
       .badge.bg-danger No  
-%p  
+  .card-footer
+    - user.roles.each do |role|
+      .badge.bg-info
+        = role.name    
+%p
